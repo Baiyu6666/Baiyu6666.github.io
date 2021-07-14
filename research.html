@@ -1,0 +1,137 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homepage of Yao Mark Mu</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-29643011-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+    <link rel="stylesheet" href="assets/css/academicons.css"/>
+    
+    <style>
+      button.accordion {
+      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      cursor: pointer;
+      padding: 0px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 100%;
+      transition: 0.3s;
+      background-color: #f8f8f8;
+      }
+      button.accordion.active, button.accordion:hover {
+      background-color: #f8f8f8;
+      }
+      button.accordion:after {
+      content: " [+] ";
+      font-size: 90%;
+      color:#777;
+      float: left;
+      margin-left: 1px;
+      }
+
+      button.accordion.active:after {
+      content: " [\2212] ";
+      }
+      div.panel {
+      padding: 0 20px;
+      margin-top: 5px;
+      display: none;
+      background-color: white;
+      font-size: 100%;
+      }
+      div.panel.show {
+      display: block !important;
+      }
+      .social-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Yao Mark Mu</h1>
+        <p>Ph.D. Candidate of Computer Science<br>The University of Hong Kong</p>
+<!--        <p>Research Affiliate<br><a href="http://legacy.iza.org/en/webcontent/personnel/photos/index_html?key=24155">Institute for the Study of Labor (IZA)</a></p>-->
+    <h3><a href="https://yaomarkmu.github.io/">Home</a></h3>
+        <h3><a href="https://yaomarkmu.github.io/research.html">Research</a></h3>
+    <h3><a href="https://yaomarkmu.github.io/research/CV.pdf">CV</a></h3>
+        <h3><a href="https://github.com/YaoMarkMu">Code</a></h3>
+<!--        <h3><a href="https://yaomarkmu.github.io/teaching.html">Teaching</a></h3> -->
+<!--        <h3><a href="https://yaomarkmu.github.io/personal.html">Personal</a></h3>-->
+    <b>Social</b><br>
+        <div class="social-row">
+          <a href="yaomarkmu@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
+          <a href=" https://scholar.google.com/citations?user=HK4x3fkAAAAJ&hl=zh-CN" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
+          <a href="https://www.researchgate.net/profile/Yao_Mu11/" class="author-social" target="_blank"><i class="fa fa-fw fa-researchgate-square"></i> Researchgate</a><br>
+          <a href="https://orcid.org/0000-0002-6910-0363"><i class="ai ai-fw ai-orcid-square"></i> ORCID</a><br>
+          <a href="https://github.com/YaoMarkMu"><i class="fa fa-fw fa-github-square"></i> GitHub</a><br>
+          <a href="https://www.linkedin.com/in/mu-yao-308607185" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a><br>
+          <br>
+        </div>
+        <br>
+
+    <p><b>Contact:</b><br>Department of Computer Science<br>The University of Hong Kong<br>Rm 301 Chow Yei Ching Building<br>Pokfulam, Hong Kong</p>
+<!--    <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>-->
+
+      </header>
+      <section>
+
+    <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Published &amp; Forthcoming Papers</h2>
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://YaoMarkMu.github.io/research/CCAC.pdf">Model-Based Actor-Critic with Chance Constraint for Stochastic System</a> <br> <i>European Control Conference 2021 (Top 3 Conference of Control)</i>, Accepted. <br><button class="accordion">
+    Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Safety constraints are essential for reinforcement learning (RL) applied in real-world situations. Chance constraints are suitable to represent the safety requirements in stochastic systems. Most existing RL methods with chance constraints have a low convergence rate, and only learn a conservative policy. In this paper, we propose a model-based chance constrained actor-critic (CCAC) algorithm which can efficiently learn a safe and non-conservative policy. Different from existing methods that optimize a conservative lower bound, CCAC directly solves the original chance constrained problems, where the objective function and safe probability is simultaneously optimized with adaptive weights. In order to improve the convergence rate, CCAC utilizes the gradient of dynamic model to accelerate policy optimization. The effectiveness of CCAC is demonstrated by an aggressive car-following task. Experiments indicate that compared with previous methods, CCAC improves the performance by 57.6% while guaranteeing safety, with a five times faster convergence rate. </p></div>
+
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://YaoMarkMu.github.io/research/MixedEPO.pdf">Mixed Reinforcement Learning for Efficient Policy Optimization in Stochastic Environments</a>  <br> <i>International Conference on Computer Applications in Shipbuilding (ICCAS)</i>, Accepted (Student Best Paper Award  Oral). <br><button class="accordion">
+    Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Reinforcement learning has the potential to control stochastic nonlinear systems in optimal manners successfully. We propose a mixed reinforcement learning (mixed RL) algorithm by simultaneously using dual representations of environmental dynamics to search the optimal policy. The dual representation includes an empirical dynamic model and a set of state-action data. The former can embed the designer’s knowledge and reduce the difficulty of learning, and the latter can be used to compensate the model inaccuracy since it reflects the real system dynamics accurately. Such a design has the capability of improving both learning accuracy and training speed. In the mixed RL framework, the additive uncertainty of stochastic model is compensated by using explored state-action data via iterative Bayesian estimator (IBE). The optimal policy is then computed in an iterative way by alternating between policy … </p></div>
+
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://YaoMarkMu.github.io/research/MAC.pdf">Mixed Actor Critic for Efficient Policy Optimization in Stochastic Environments</a>  <br> <i>IEEE Transactions on Automation Science and Engineering</i>, Accepted. <br><button class="accordion">
+    Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Reinforcement learning (RL) methods often rely on massive exploration data to search optimal policies, and suffer from poor sampling efficiency. This paper presents a mixed reinforcement learning (mixed RL) algorithm by simultaneously using dual representations of environmental dynamics to search the optimal policy with the purpose of improving both learning accuracy and training speed. The dual representations indicate the environmental model and the state-action data: the former can accelerate the learning process of RL, while its inherent model uncertainty generally leads to worse policy accuracy than the latter, which comes from direct measurements of states and actions. In the framework design of the mixed RL, the compensation of the additive stochastic model uncertainty is embedded inside the policy iteration RL framework by using explored state-action data via iterative Bayesian estimator (IBE). The optimal policy is then computed in an iterative way by alternating between policy evaluation (PEV) and policy improvement (PIM). The convergence of the mixed RL is proved using the Bellman's principle of optimality, and the recursive stability of the generated policy is proved via the Lyapunov's direct method. The effectiveness of the mixed RL is demonstrated by a typical optimal control problem of stochastic non-affine nonlinear systems (ie, double lane change task with an automated vehicle). </p></div>
+
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://openreview.net/forum?id=Hpxrls8yAn">Robust Memory Augmentation by Constrained Latent Imagination</a>  <br> <i>International Conference on Learning Representations 2021</i>, Under Review. <br><button class="accordion">
+    Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>  The latent dynamics model summarizes an agent’s high dimensional experiences in a compact way. While learning from imagined trajectories by the latent model is confirmed to has great potential to facilitate behavior learning, the lack of memory diversity limits generalization capability. Inspired by a neuroscience experiment of “forming artificial memories during sleep”, we propose a robust memory augmentation method with Constrained Latent ImaginatiON (CLION) under a novel actor-critic framework, which aims to speed up the learning of the optimal policy with virtual episodic. Various experiments on high-dimensional visual control tasks with arbitrary image uncertainty demonstrate that CLION outperforms existing approaches in terms of data-efficiency, robustness to uncertainty, and final performance. </p></div>
+
+    <script src="javascripts/scale.fix.js"></script>
+    <script> 
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.parentNode.nextElementSibling.classList.toggle("show");
+      }
+    }
+    </script>
+  </body>
+</html>
