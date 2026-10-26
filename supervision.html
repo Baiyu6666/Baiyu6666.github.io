@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Student Supervision | Baiyu Peng</title>
+    <meta name="description" content="Student projects supervised by Baiyu Peng at EPFL LASA, with short summaries and project report PDFs.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <style>
+      .student-group {
+        padding: 24px 0;
+        border-top: 1px solid #e5e5e5;
+      }
+      .student-group h3 {
+        margin-bottom: 16px;
+      }
+      .student-project + .student-project {
+        margin-top: 24px;
+      }
+      .student-project h4 {
+        line-height: 1.4;
+        margin-bottom: 8px;
+      }
+      .student-project .project-meta {
+        color: #595959;
+        margin-bottom: 12px;
+      }
+      .student-project p {
+        margin-bottom: 12px;
+      }
+      .student-project p:last-child {
+        margin-bottom: 0;
+      }
+      a[aria-current="page"] {
+        color: #393939;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Baiyu Peng</h1>
+        <p>PhD Student<br>EPFL, Switzerland</p>
+        <p>Learning Algorithms and Systems<br>Laboratory (LASA)</p>
+        <h3><a href="index.html">Home</a></h3>
+        <h3><a href="publication/CV.pdf">CV</a></h3>
+        <h3><a href="research.html">Research</a></h3>
+        <h3><a href="publication.html">Publication</a></h3>
+        <h3><a href="supervision.html" aria-current="page">Student Supervision</a></h3>
+        <h3><a href="personal.html">Daily life</a></h3>
+        <p><b>Social</b><br>
+          <a href="https://www.researchgate.net/profile/Baiyu-Peng-2" target="_blank" rel="noopener noreferrer">Researchgate</a>
+        </p>
+        <p><b>Contact:</b><br>Email: <a href="mailto:baiyu.peng@epfl.ch">baiyu.peng@epfl.ch</a><br>Phone: +86 18810507500</p>
+      </header>
+      <section aria-labelledby="supervision-title">
+        <h2 id="supervision-title">Supervised Student Projects</h2>
+        <p>Student projects I have supervised at the Learning Algorithms and Systems Laboratory (LASA), EPFL, exploring how robots can learn constraints from demonstrations and use them for motion planning and control.</p>
+
+        <div class="student-group" role="group" aria-labelledby="student-1">
+          <h3 id="student-1">Albert Árboles</h3>
+        <article class="student-project" aria-labelledby="equality-title">
+          <h4 id="equality-title">Learning Equality Constraints from Demonstrations</h4>
+          <p>Learns geometric constraint surfaces from demonstrated trajectories using a neural model. Projection-based corrections and optimal control then generate robot motions that stay on the learned surface while moving toward new goals.</p>
+          <p><a href="supervision/reports/albert-arboles-equality-constraints.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Albert Árboles's report on learning equality constraints (PDF, opens in a new tab)">Report (PDF)</a></p>
+        </article>
+        </div>
+
+        <div class="student-group" role="group" aria-labelledby="student-2">
+          <h3 id="student-2">Marcus Hughes Edjolo</h3>
+        <article class="student-project" aria-labelledby="llm-title">
+          <h4 id="llm-title">LLM-guided Constraint Learning from Demonstration</h4>
+          <p class="project-meta">Semester project · Spring 2026</p>
+          <p>Uses a large language model to propose relevant variables and constraint forms from a natural-language task, then fits numerical boundaries from a safe demonstration and synthetic unsafe examples. The resulting explicit inequalities are evaluated in a model predictive control trajectory planner.</p>
+          <p><a href="supervision/reports/marcus-edjolo-llm-guided-constraint-learning.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Marcus Hughes Edjolo's report on LLM-guided constraint learning (PDF, opens in a new tab)">Report (PDF)</a></p>
+        </article>
+        </div>
+
+        <div class="student-group" role="group" aria-labelledby="student-3">
+          <h3 id="student-3">Vincent Guilherme Bouzereau</h3>
+        <article class="student-project" aria-labelledby="mpc-title">
+          <h4 id="mpc-title">Model Predictive Control for Constraint Learning from Expert Demonstrations</h4>
+          <p class="project-meta">Semester project · Spring 2026</p>
+          <p>Integrates constraints learned through Positive-Unlabeled Constraint Learning (PUCL) into a model predictive control planner as explicit inequalities. Simulation experiments study obstacle avoidance, generalization to new starts and goals, and how the planner's exploration affects constraint learning.</p>
+          <p><a href="supervision/reports/vincent-bouzereau-mpc-constraint-learning.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Vincent Guilherme Bouzereau's report on MPC for constraint learning (PDF, opens in a new tab)">Report (PDF)</a></p>
+        </article>
+        </div>
+
+        <div class="student-group" role="group" aria-labelledby="student-4">
+          <h3 id="student-4">Erfan Etesami</h3>
+        <article class="student-project" aria-labelledby="irl-title">
+          <h4 id="irl-title">Constraint Learning with Inverse Reinforcement Learning</h4>
+          <p>Investigates how to recover unknown state and action constraints from expert demonstrations when the task reward is known. The project alternates policy optimization and constraint inference, exploring neural classifiers and Gaussian mixture models to identify feasible regions.</p>
+          <p><a href="supervision/reports/erfan-etesami-irl-constraint-learning.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Erfan Etesami's report on constraint learning with inverse reinforcement learning (PDF, opens in a new tab)">Report (PDF)</a></p>
+        </article>
+
+        </div>
+      </section>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>

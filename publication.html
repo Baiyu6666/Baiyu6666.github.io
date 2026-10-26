@@ -74,6 +74,12 @@
       div.panel.show {
       display: block !important;
       }
+      .publication {
+        margin-bottom: 24px;
+      }
+      .publication:last-child {
+        margin-bottom: 0;
+      }
       .social-row {
         display: flex;
         flex-wrap: wrap;
@@ -85,13 +91,14 @@
     <div class="wrapper">
       <header>
         <h1>Baiyu Peng</h1>
-        <p>Master's degree in Mechanical Engineering<br>Tsinghua University</p>
-        <p>Bachelor's degree in Vehicle Engineering<br>Tsinghua University</p>
-    <h3><a href="https://Baiyu6666.github.io/">Home</a></h3>
-    <h3><a href="https://Baiyu6666.github.io/publication/CV.pdf">CV</a></h3>
-    <h3><a href="https://Baiyu6666.github.io/research.html">Research</a></h3>
-    <h3><a href="https://Baiyu6666.github.io/publication.html">Publication</a></h3>
-    <h3><a href="https://Baiyu6666.github.io/personal.html">Daily life</a></h3>
+        <p>PhD Student<br>EPFL, Switzerland</p>
+        <p>Learning Algorithms and Systems<br>Laboratory (LASA)</p>
+    <h3><a href="index.html">Home</a></h3>
+    <h3><a href="publication/CV.pdf">CV</a></h3>
+    <h3><a href="research.html">Research</a></h3>
+    <h3><a href="publication.html">Publication</a></h3>
+    <h3><a href="supervision.html">Student Supervision</a></h3>
+    <h3><a href="personal.html">Daily life</a></h3>
     <b>Social</b><br>
         <div class="social-row">
 <!--          <a href="Baiyu6666@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>-->
@@ -104,51 +111,93 @@
         </div>
         <br>
 
-    <p><b>Contact:</b><br><i class="fa fa-fw fa-envelope-square"></i>Emails: pby19@tsinghua.org.cn<br><i class="fa fa-fw fa-phone-square"></i>Phone: +86 18810507500<br>
+    <p><b>Contact:</b><br><i class="fa fa-fw fa-envelope-square"></i>Email: <a href="mailto:baiyu.peng@epfl.ch">baiyu.peng@epfl.ch</a><br><i class="fa fa-fw fa-phone-square"></i>Phone: +86 18810507500<br>
       </header>
       <section>
 
+    <h2 id="under-review">Under Review</h2>
+      <article class="publication">
+      <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="publication/SWCL.pdf">Learning Stage-Wise Constraints from Unsegmented Demonstrations for Robotic Tasks</a>
+          <br> <b>Baiyu Peng</b>, Aude Billard <br> <i>IEEE Transactions on Industrial Informatics (TII)</i>, under review.<br>
+      <button class="accordion">Abstract</button>
+      </p>
+      <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>Learning explicit task constraints from demonstrations provides reusable task specifications for planning in robotic applications. However, many existing constraint-learning methods assume that a single constraint set remains active throughout the entire trajectory, which is restrictive for multi-stage tasks where different constraints may govern different phases and the stage boundaries are unobserved. This paper studies stage-wise constraint learning from feasible, unsegmented demonstrations. Given a task-dependent feature bank, the goal is to determine, for each stage and feature, whether the feature is inactive, equality-constrained, lower-bound constrained, or upper-bound constrained, together with the corresponding target or boundary value. We propose Stage-Wise Constraint Learning (SWCL), which jointly infers shared stage-wise constraints and demonstration-specific stage boundaries. SWCL combines constraint likelihoods of four modes, a subgoal-progress likelihood and a mode prior in a hard-EM-like framework: stage boundaries are updated by dynamic programming, while shared constraint modes and parameters are estimated from the recovered segments. Experiments on three simulated multi-stage benchmarks show that SWCL achieves more accurate and consistent recovery of stage boundaries and constraint structures than representative segmentation baselines. The learned constraints are further reused for planning in modified task instances. Real-robot experiments on a KUKA iiwa bar-clearing task show that the learned constraints enable obstacle avoidance in 90% of trials, bar clearing in 100%, and table clearing in 85%, while also transferring to a modified environment.</p></div>
+      </article>
+
     <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Published &amp; Forthcoming Papers</h2>
+      <article class="publication">
+      <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="publication/ONCL.pdf">Learning Equality Constraints from Trajectory Demonstrations</a>
+          <br> <b>Baiyu Peng</b>, Albert Árboles, Aude Billard <br> <i>IEEE Robotics and Automation Letters (RA-L)</i>, 11(11), 12958–12965. 2026. <a href="https://www.youtube.com/watch?v=S43TTF1arno">[video]</a><br>
+      <button class="accordion">Abstract</button>
+      </p>
+      <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>Equality constraints are common in robotics, arising in applications such as pose-constrained manipulation, coordinated motion, and task-space planning. Classical constrained planners typically assume an analytic constraint function, whereas in practice only feasible demonstrations may be available. We study how to learn explicit equality constraints directly from such demonstrations. We propose Orthonormal Neural Constraint Learning (ONCL), a method that learns multiple scalar constraint functions jointly and represents the equality constraint by their common zero set. Rather than estimating local normal directions and generating large amounts of supervised off-constraint data as related works, ONCL regularizes the gradients of different constraint functions to be normalized and mutually orthogonal, inducing a structured local normal space during learning. This yields an explicit differentiable constraint model in the original state space for evaluation and downstream planning. We evaluate ONCL on ten synthetic and robotic datasets spanning dimensions from 2 to 12. ONCL significantly outperforms each of three baselines on six datasets, while remaining competitive on the other datasets. We further validate ONCL on a physical KUKA iiwa 14 using kinesthetic demonstrations collected by a human operator. The learned pose constraint is subsequently used on the same platform for downstream trajectory planning under a modified task objective and an additional known obstacle-avoidance constraint.</p></div>
+      </article>
+
+      <article class="publication">
+      <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="publication/MICL.pdf">Actively Learning Task Constraints from Feasible and Failed Demonstrations</a>
+          <br> <b>Baiyu Peng</b>, Aude Billard <br> <i>IEEE Transactions on Artificial Intelligence (TAI)</i>, 1–15, 2026.<br>
+      <button class="accordion">Abstract</button>
+      </p>
+      <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>In many autonomous control and robotic tasks, agents must operate under constraints; however, many of these constraints are unknown or difficult to specify explicitly. This paper addresses the problem of learning unknown constraints from demonstrations, including not only feasible demonstrations but also failed ones, which are typically ignored by existing methods. We propose Multiple Instance Constraint Learning (MICL), a framework that treats feasible and failed demonstrations as bags of states with different bag-level feasibility labels, and infers a state-level constraint function using a constraint network with a dedicated pooling layer. Theoretical analysis shows that MICL can identify infeasible states with bounded errors, and thus recover the underlying constraint function. Unlike existing works that learn only from static datasets, we further introduce an active learning framework that enables the agent to iteratively refine the constraint model by querying an expert about the feasibility of newly generated trajectories. These trajectories are generated using either a Dynamical System or a Reinforcement Learning policy, and selected for querying based on uncertainty-, diversity-, or mutual-information-based scores. We validate the proposed method in five simulated robotic tasks with different state dimensions and constraint structures. Results show that MICL outperforms or matches the strongest baselines in terms of constraint accuracy and downstream policy violation rate. The active learning framework progressively improves constraint accuracy as more expert-labeled queries are added, and active query strategies generally outperform random querying by selecting more informative trajectories.</p></div>
+      </article>
+
+      <article class="publication">
+      <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="publication/PUCL.pdf">Positive-Unlabeled Constraint Learning for Inferring Nonlinear Continuous Constraints Functions From Expert Demonstrations</a>
+          <br> <b>Baiyu Peng</b>, Aude Billard <br> <i>IEEE Robotics and Automation Letters (RA-L)</i>, 10(2), 1593–1600. 2024.<br>
+      <button class="accordion">Abstract</button>
+      </p>
+      <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>Planning for diverse real-world robotic tasks necessitates to know and write all constraints. However, instances exist where these constraints are either unknown or challenging to specify accurately. A possible solution is to infer the unknown constraints from expert demonstration. This letter presents a novel two-step Positive-Unlabeled Constraint Learning (PUCL) algorithm to infer a continuous constraint function from demonstrations, without requiring prior knowledge of the true constraint parameterization or environmental model as existing works. We treat all data in demonstrations as positive (feasible) data, and learn a control policy to generate potentially infeasible trajectories, which serve as unlabeled data. The proposed two-step learning framework first identifies reliable infeasible data using a distance metric, and secondly learns a binary feasibility classifier (i.e., constraint function) from the feasible demonstrations and reliable infeasible data. The proposed method is flexible to learn complex-shaped constraint boundary and will not mistakenly classify demonstrations as infeasible as previous methods. The effectiveness of the proposed method is verified in four constrained environments, using a networked policy or a dynamical system policy. It successfully infers the continuous nonlinear constraints and outperforms other baseline methods in terms of constraint accuracy and policy safety.</p></div>
+      </article>
+
+      <article class="publication">
       <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://Baiyu6666.github.io/publication/SPILjournal.pdf">Model-based Chance-Constrained Reinforcement Learning via Separated Proportional-Integral Lagrangian</a>
           <br> <b>Baiyu Peng</b>, Jingliang Duan, Jianyu Chen, Shengbo Eben Li, Genjin Xie, Congsheng Zhang, Yang Guan, Yao Mu, Enxin Sun <br>  <i>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</i>. <a href="https://youtu.be/oVDB2XqNoCU">[video of real robot experiments]</a><br>
       <button class="accordion">
     Abstract
     </button>
-    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Safety is essential for reinforcement learning (RL) applied in the real world. Adding chance constraints (or probabilistic constraints) is a suitable way to enhance RL safety under uncertainty. Existing chance-constrained RL methods like the penalty methods and the Lagrangian methods either exhibit periodic oscillations or learn an over-conservative or unsafe policy.
+      </p>
+      <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Safety is essential for reinforcement learning (RL) applied in the real world. Adding chance constraints (or probabilistic constraints) is a suitable way to enhance RL safety under uncertainty. Existing chance-constrained RL methods like the penalty methods and the Lagrangian methods either exhibit periodic oscillations or learn an over-conservative or unsafe policy.
 In this article, we address these shortcomings by proposing a separated proportional-integral Lagrangian (SPIL) algorithm. We first review the constrained policy optimization process from a feedback control perspective, which regards the penalty weight as the control input and the safe probability as the control output. Based on this, the penalty method is formulated as a proportional controller, and the Lagrangian method is formulated as an integral controller. We then unify them and present a proportional-integral Lagrangian method to get both their merits, with an integral separation technique to limit the integral value in a reasonable range. To accelerate training, the gradient of safe probability is computed in a model-based manner.
           The convergence of the overall algorithm is analyzed. We demonstrate our method can reduce the oscillations and conservatism of RL policy in a car-following simulation. To prove its practicality, we also apply our method to a real-world mobile robot navigation task, where our robot successfully avoids a moving obstacle with highly uncertain or even aggressive behaviors.</p></div>
+      </article>
 
-
-
-
-          <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://Baiyu6666.github.io/publication/SPIL.pdf">Separated Proportional-Integral Lagrangian for Chance Constrained Reinforcement Learning</a>
+      <article class="publication">
+      <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://Baiyu6666.github.io/publication/SPIL.pdf">Separated Proportional-Integral Lagrangian for Chance Constrained Reinforcement Learning</a>
           <br> <b>Baiyu Peng</b>, Yao Mu, Jingliang Duan, Yang Guan, Shengbo Eben Li, Jianyu Chen <br>  <i>2021th IEEE Intelligent Vehicle Symposium (IV)</i>, <b>Finalist for Student Best Paper Award, Top1%, 3/220</b>. <a href="https://youtu.be/lsOE4nWvjoA">[video]</a><br>
       <button class="accordion">
     Abstract
     </button>
-    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Safety is essential for reinforcement learning (RL) applied in real-world tasks like autonomous driving. Imposing chance constraints (or probabilistic constraints) is a suitable way to enhance RL safety under model uncertainty. Existing chance constrained RL methods like the penalty methods and the Lagrangian methods either exhibit periodic oscillations or learn an over-conservative or unsafe policy.
+      </p>
+      <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Safety is essential for reinforcement learning (RL) applied in real-world tasks like autonomous driving. Imposing chance constraints (or probabilistic constraints) is a suitable way to enhance RL safety under model uncertainty. Existing chance constrained RL methods like the penalty methods and the Lagrangian methods either exhibit periodic oscillations or learn an over-conservative or unsafe policy.
 In this paper, we address these shortcomings by elegantly combining these two methods and propose a separated proportional-integral Lagrangian (SPIL) algorithm. We first rewrite penalty methods as optimizing safe probability according to the proportional value of constraint violation, and Lagrangian methods as optimizing according to the integral value of the violation. Then we propose to add up both the integral and proportion values to optimize the policy, with an integral separation technique to limit the integral value within a reasonable range. Besides, the gradient of policy is computed in a model-based paradigm to accelerate training. The proposed method is proved to reduce oscillations and conservatism while ensuring safety by a car-following experiment. </p></div>
+      </article>
 
-
-
-          <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://Baiyu6666.github.io/publication/CCAC.pdf">Model-Based Actor-Critic with Chance Constraint for Stochastic System</a> <br>  <b>Baiyu Peng</b>, Yao Mu, Yang Guan, Shengbo Eben Li, Yuming Yin, Jianyu Chen <br> <i>2021 IEEE 60th Conference on Decision and Control (CDC)</i>. <a href="https://youtu.be/B5tIsIDLMDA">[video]</a> <br>
+      <article class="publication">
+      <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://Baiyu6666.github.io/publication/CCAC.pdf">Model-Based Actor-Critic with Chance Constraint for Stochastic System</a> <br>  <b>Baiyu Peng</b>, Yao Mu, Yang Guan, Shengbo Eben Li, Yuming Yin, Jianyu Chen <br> <i>2021 IEEE 60th Conference on Decision and Control (CDC)</i>. <a href="https://youtu.be/B5tIsIDLMDA">[video]</a> <br>
     <button class="accordion">
         Abstract
     </button>
-    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Safety is essential for reinforcement learning (RL) applied in real-world situations. Chance constraints are suitable to represent the safety requirements in stochastic systems. Previous chance constrained RL methods usually learn an either conservative or unsafe policy, and some of them also suffer from a low convergence rate. In this paper, we propose a model-based chance constrained actor-critic (CCAC) algorithm which can efficiently learn a safe and non-conservative policy. Different from existing methods that optimize a conservative lower bound, CCAC directly solves the original chance constrained problems, where the objective function and safe probability are simultaneously optimized with adaptive weights. In order to improve the convergence rate, CCAC utilizes the gradient of dynamic model to accelerate policy optimization. The effectiveness of CCAC is demonstrated by a stochastic car-following task. Experiments indicate that CCAC achieves good performance while guaranteeing safety, with a five times faster convergence rate compared with model-free RL methods. It also has 100 times higher online computation efficiency than traditional safety techniques such as stochastic model predictive control.   </p></div>
+      </p>
+      <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Safety is essential for reinforcement learning (RL) applied in real-world situations. Chance constraints are suitable to represent the safety requirements in stochastic systems. Previous chance constrained RL methods usually learn an either conservative or unsafe policy, and some of them also suffer from a low convergence rate. In this paper, we propose a model-based chance constrained actor-critic (CCAC) algorithm which can efficiently learn a safe and non-conservative policy. Different from existing methods that optimize a conservative lower bound, CCAC directly solves the original chance constrained problems, where the objective function and safe probability are simultaneously optimized with adaptive weights. In order to improve the convergence rate, CCAC utilizes the gradient of dynamic model to accelerate policy optimization. The effectiveness of CCAC is demonstrated by a stochastic car-following task. Experiments indicate that CCAC achieves good performance while guaranteeing safety, with a five times faster convergence rate compared with model-free RL methods. It also has 100 times higher online computation efficiency than traditional safety techniques such as stochastic model predictive control.   </p></div>
+      </article>
 
-          <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://Baiyu6666.github.io/publication/MixedEPO.pdf">Mixed Reinforcement Learning for Efficient Policy Optimization in Stochastic Environments</a>  <br> Yao Mu, <b>Baiyu Peng</b>, Ziqing Gu, Shengbo Eben Li, Chang Liu, Bingbing Nie, Jianfeng Zheng, Bo Zhang <br> <i>2020 20th International Conference on Control, Automation and Systems (ICCAS)</i>, <b>Student Best Paper Award, Top1%, 5/500</b>. <br><button class="accordion">
+      <article class="publication">
+      <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://Baiyu6666.github.io/publication/MixedEPO.pdf">Mixed Reinforcement Learning for Efficient Policy Optimization in Stochastic Environments</a>  <br> Yao Mu, <b>Baiyu Peng</b>, Ziqing Gu, Shengbo Eben Li, Chang Liu, Bingbing Nie, Jianfeng Zheng, Bo Zhang <br> <i>2020 20th International Conference on Control, Automation and Systems (ICCAS)</i>, <b>Student Best Paper Award, Top1%, 5/500</b>. <br><button class="accordion">
     Abstract
     </button>
-    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Reinforcement learning has the potential to control stochastic nonlinear systems in optimal manners successfully. We propose a mixed reinforcement learning (mixed RL) algorithm by simultaneously using dual representations of environmental dynamics to search the optimal policy. The dual representation includes an empirical dynamic model and a set of state-action data. The former can embed the designer's knowledge and reduce the difficulty of learning, and the latter can be used to compensate the model inaccuracy since it reflects the real system dynamics accurately. Such a design has the capability of improving both learning accuracy and training speed. In the mixed RL framework, the additive uncertainty of stochastic model is compensated by using explored state-action data via iterative Bayesian estimator (IBE). The optimal policy is then computed in an iterative way by alternating between policy evaluation (PEV) and policy improvement (PIM). The effectiveness of mixed RL is demonstrated by a typical optimal control problem of stochastic non-affine nonlinear systems (i.e., double lane change task with an automated vehicle). </p></div>
+      </p>
+      <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Reinforcement learning has the potential to control stochastic nonlinear systems in optimal manners successfully. We propose a mixed reinforcement learning (mixed RL) algorithm by simultaneously using dual representations of environmental dynamics to search the optimal policy. The dual representation includes an empirical dynamic model and a set of state-action data. The former can embed the designer's knowledge and reduce the difficulty of learning, and the latter can be used to compensate the model inaccuracy since it reflects the real system dynamics accurately. Such a design has the capability of improving both learning accuracy and training speed. In the mixed RL framework, the additive uncertainty of stochastic model is compensated by using explored state-action data via iterative Bayesian estimator (IBE). The optimal policy is then computed in an iterative way by alternating between policy evaluation (PEV) and policy improvement (PIM). The effectiveness of mixed RL is demonstrated by a typical optimal control problem of stochastic non-affine nonlinear systems (i.e., double lane change task with an automated vehicle). </p></div>
+      </article>
 
-    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://Baiyu6666.github.io/publication/DDDQN.pdf">End-to-End Autonomous Driving through Dueling Double Deep Q-Network</a>  <br> <b>Baiyu Peng</b>, Qi Sun, Shengbo Eben Li, Dongsuk Kum, Yuming Yin, Junqing Wei, Tianyu Gu <br> <i>Automotive Innovation 4(3), 328–337</i>. <br><button class="accordion">
+      <article class="publication">
+      <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://Baiyu6666.github.io/publication/DDDQN.pdf">End-to-End Autonomous Driving through Dueling Double Deep Q-Network</a>  <br> <b>Baiyu Peng</b>, Qi Sun, Shengbo Eben Li, Dongsuk Kum, Yuming Yin, Junqing Wei, Tianyu Gu <br> <i>Automotive Innovation 4(3), 328–337</i>. <br><button class="accordion">
     Abstract
     </button>
-    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Recent years have seen the rapid development of autonomous driving systems, which are typically designed in a hierarchical architecture or an end-to-end architecture. The hierarchical architecture is always complicated and hard to design, while the end-to-end architecture is more promising due to its simple structure. This paper puts forward an end-to-end autonomous driving method through a deep reinforcement learning algorithm Dueling Double Deep Q-Network, making it possible for the vehicle to learn end-to-end driving by itself. This paper firstly proposes an architecture for the end-to-end lane-keeping task. Unlike the traditional image-only state space, the presented state space is composed of both camera images and vehicle motion information. Then corresponding dueling neural network structure is introduced, which reduces the variance and improves sampling efficiency. Thirdly, the proposed method is applied to The Open Racing Car Simulator (TORCS) to demonstrate its great performance, where it surpasses human drivers. Finally, the saliency map of the neural network is visualized, which indicates the trained network drives by observing the lane lines. A video for the presented work is available online, https://youtu.be/76ciJmIHMD8 or https://v.youku.com/v_show/id_XNDM4ODc0MTM4NA==.html</p></div>
-
-
-
+      </p>
+      <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Recent years have seen the rapid development of autonomous driving systems, which are typically designed in a hierarchical architecture or an end-to-end architecture. The hierarchical architecture is always complicated and hard to design, while the end-to-end architecture is more promising due to its simple structure. This paper puts forward an end-to-end autonomous driving method through a deep reinforcement learning algorithm Dueling Double Deep Q-Network, making it possible for the vehicle to learn end-to-end driving by itself. This paper firstly proposes an architecture for the end-to-end lane-keeping task. Unlike the traditional image-only state space, the presented state space is composed of both camera images and vehicle motion information. Then corresponding dueling neural network structure is introduced, which reduces the variance and improves sampling efficiency. Thirdly, the proposed method is applied to The Open Racing Car Simulator (TORCS) to demonstrate its great performance, where it surpasses human drivers. Finally, the saliency map of the neural network is visualized, which indicates the trained network drives by observing the lane lines. A video for the presented work is available online, https://youtu.be/76ciJmIHMD8 or https://v.youku.com/v_show/id_XNDM4ODc0MTM4NA==.html</p></div>
+      </article>
+      </section>
+    </div>
     <script src="javascripts/scale.fix.js"></script>
     <script> 
     var acc = document.getElementsByClassName("accordion");
@@ -157,7 +206,7 @@ In this paper, we address these shortcomings by elegantly combining these two me
     for (i = 0; i < acc.length; i++) {
         acc[i].onclick = function(){
             this.classList.toggle("active");
-            this.parentNode.nextElementSibling.classList.toggle("show");
+            this.closest(".publication").querySelector(".panel").classList.toggle("show");
       }
     }
     </script>

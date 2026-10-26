@@ -5,7 +5,7 @@
   <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Homepage of Baiyu Peng</title>
+    <title>Research | Baiyu Peng</title>
 
 
           <script>
@@ -86,13 +86,14 @@
     <div class="wrapper">
       <header>
         <h1>Baiyu Peng</h1>
-        <p>Master's degree in Mechanical Engineering<br>Tsinghua University</p>
-        <p>Bachelor's degree in Vehicle Engineering<br>Tsinghua University</p>
-    <h3><a href="https://Baiyu6666.github.io/">Home</a></h3>
-    <h3><a href="https://Baiyu6666.github.io/publication/CV.pdf">CV</a></h3>
-    <h3><a href="https://Baiyu6666.github.io/research.html">Research</a></h3>
-    <h3><a href="https://Baiyu6666.github.io/publication.html">Publication</a></h3>
-    <h3><a href="https://Baiyu6666.github.io/personal.html">Daily life</a></h3>
+        <p>PhD Student<br>EPFL, Switzerland</p>
+        <p>Learning Algorithms and Systems<br>Laboratory (LASA)</p>
+    <h3><a href="index.html">Home</a></h3>
+    <h3><a href="publication/CV.pdf">CV</a></h3>
+    <h3><a href="research.html">Research</a></h3>
+    <h3><a href="publication.html">Publication</a></h3>
+    <h3><a href="supervision.html">Student Supervision</a></h3>
+    <h3><a href="personal.html">Daily life</a></h3>
     <b>Social</b><br>
         <div class="social-row">
 <!--          <a href="Baiyu6666@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>-->
@@ -104,17 +105,28 @@
           <br>
         </div>
         <br>
-    <p><b>Contact:</b><br><i class="fa fa-fw fa-envelope-square"></i>Emails: pby19@tsinghua.org.cn<br><i class="fa fa-fw fa-phone-square"></i>Phone: +86 18810507500<br>
+    <p><b>Contact:</b><br><i class="fa fa-fw fa-envelope-square"></i>Email: <a href="mailto:baiyu.peng@epfl.ch">baiyu.peng@epfl.ch</a><br><i class="fa fa-fw fa-phone-square"></i>Phone: +86 18810507500<br>
       </header>
       <section>
 
-    <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research Interests Summary</h2>
+    <h2>Research Interests Summary</h2>
+      <h3 id="constraint-learning" style="font-size:110%; font-weight:bold;color:royalblue">Constraint Learning</h3>
+          <p>Robot tasks are governed by constraints such as obstacle clearance, tool orientation, contact geometry, and stage-specific requirements. These constraints can be difficult to specify by hand. My doctoral research learns explicit constraint models from demonstrations and uses them for motion planning and control, so that robots can adapt to new goals and task conditions while respecting the learned requirements.</p>
+          <p>I study how to learn from feasible and failed demonstrations, select informative expert queries, recover equality constraints, and identify changing constraints in multi-stage tasks.</p>
+          <ul>
+            <li><a href="publication/PUCL.pdf">Positive-Unlabeled Constraint Learning (PUCL)</a>: inferring nonlinear continuous constraints from feasible demonstrations.</li>
+            <li><a href="publication/MICL.pdf">Actively Learning Task Constraints</a>: combining feasible and failed demonstrations with active expert queries.</li>
+            <li><a href="publication/ONCL.pdf">Learning Equality Constraints from Trajectory Demonstrations (ONCL)</a>: learning constraint manifolds for planning and manipulation. <a href="https://www.youtube.com/watch?v=S43TTF1arno">[video]</a></li>
+            <li><a href="publication/SWCL.pdf">Stage-Wise Constraint Learning (SWCL)</a>: discovering stage boundaries and stage-specific constraints from unsegmented demonstrations. <a href="swcl-experiment.html">[video]</a></li>
+          </ul>
+
+
       <p style="font-size:110%; font-weight:bold;color:royalblue">Safe Reinforcement Learning <br>  </p>
           <p>Reinforcement Learning (RL) has shown exceptional successes in a variety of domains like Go, video Games and robotics, but its application in real world is still limited due to lack of safety guarantee.
               I am interested in developing safe RL algorithms with explicit safety constraints, promoting the RL in the real world rather than only simulators and games.     </p>
      <p align="center"><img src="safeRL.gif"  > <br>Obstacle-avoidance via safe RL. See full video <a href="https://youtu.be/iKGYaDzYwB0">here.</a></p>
 
-          </h3>
+
 
           <p style="font-size:110%; font-weight:bold;color:royalblue">Autonomous Driving <br>  </p>
           <p>Autonomous driving vehicles are expected to have a huge positive impact on the automotive industry. I am especially interested in applying the RL algorithms in decision-making and control of the autonomous vehicles and mobile robot. </p>
@@ -125,6 +137,8 @@
               I am interested in applying the RL and model predictive control method to enable multi-robot distributed planning and control.  </p>
          <p align="center"><img src="geekplus.gif"  > <br>Multi-robot control via distributed MPC. See full video <a href="https://youtu.be/sloszdZbAEE">here.</a></p>
 
+      </section>
+    </div>
     <script src="javascripts/scale.fix.js"></script>
     <script> 
     var acc = document.getElementsByClassName("accordion");
